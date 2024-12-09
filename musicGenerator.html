@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Music Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+</head>
+<body>
+
+<div class="wrapper">
+    <header class="header">
+        <div class="container">
+            <div class="header-body G-justify-between">
+                <a class="header-logo" href="audioText.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <div class="menu-bg"></div>
+                <nav class="menu">
+
+                    <div class="menu-content-mobile">
+                        <a class="header-logo" href="">
+                            <img src="assets/images/logo.svg" alt="">
+                        </a>
+                    </div>
+
+                    <ul class="menu-list G-flex">
+                        <li class='menu-list-item'>
+                            <a class="menu-list-link G-align-center" href="#possibilities">
+                                <span>Возможности</span>
+                                <i class="icon icon-arrowDown"></i>
+                            </a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="menu-list-link" href="#howWork">Как работает</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="menu-list-link" href="#forWhom">Для кого</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="menu-list-link" href="#reviews">Отзывы</a>
+                        </li>
+                        <li class="menu-list-item">
+                            <a class="menu-list-link" href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+
+                    <div class="header-mobile-actions ">
+                        <button class="btn-login btn-black ">Вход</button>
+                        <button class="btn-register btn-white  ">Регистрация</button>
+                    </div>
+
+                </nav>
+                <div class="burger">
+                    <span></span>
+                </div>
+                <div class="header-actions G-align-center">
+                    <button class="btn-login btn-black ">Вход</button>
+                    <button class="btn-register btn-white  ">Регистрация</button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <main class="main">
+        <section class="hero-section section ">
+            <div class="container">
+                <div class="hero-body">
+                    <div class="hero-top-block G-flex">
+                        <div class='music-top-titles'>
+                            <h1 class='hero-main-title'>
+                                Создавай <span class="audio-title-gradient">уникальную</span> музыку за секунды
+                            </h1>
+
+                            <button class='hero-register btn-gradient'>Зарегистрироваться</button>
+
+                        </div>
+
+                        <div class='hero-top-info '>
+                            <h3 class='music-info-title hero-info-title'>
+                                Открой для себя генерацию музыкальных композиций любой длины. Быстро, качественно,
+                                вдохновляюще
+                            </h3>
+                            <div class='hero-graphics G-align-center'>
+                                <img class="hero-graphics-desktop" src="assets/images/Grapics.svg" alt="">
+                                <img class="hero-graphics-mobile" src="assets/images/GrapicsMobile.svg" alt="">
+
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class='music-slide-box '>
+                        <div class="music-generate-slides">
+                            <div class="music-generate-swiper swiper">
+                                <div class=" swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <div class="music-slide">
+                                            <div class="music-slide-img">
+                                                <img src="assets/images/musicSlide6.png" alt="">
+                                            </div>
+                                            <div class="music-slide-name">Космическая одиссея</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="music-slide">
+                                            <div class="music-slide-img">
+                                                <img src="assets/images/musicSlide5.png" alt="">
+                                            </div>
+                                            <div class="music-slide-name">Мгновение вечно</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="music-slide">
+                                            <div class="music-slide-img">
+                                                <img src="assets/images/musicSlide4.png" alt="">
+                                            </div>
+                                            <div class="music-slide-name">Краски лета</div>
+                                        </div>
+                                    </div>
+
+                                    <div class="swiper-slide">
+                                        <div class="music-slide">
+                                            <div class="music-slide-img">
+                                                <img src="assets/images/musicSlide1.png" alt="">
+                                            </div>
+                                            <div class="music-slide-name">Обнимая небо</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="music-slide">
+                                            <div class="music-slide-img">
+                                                <img src="assets/images/musicSlide2.png" alt="">
+                                            </div>
+                                            <div class="music-slide-name">Единственная</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="music-slide">
+                                            <div class="music-slide-img">
+                                                <img src="assets/images/musicSlide3.png" alt="">
+                                            </div>
+                                            <div class="music-slide-name">Дождь из роз</div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <div class="music-slide">
+                                            <div class="music-slide-img">
+                                                <img src="assets/images/musicSlide7.png" alt="">
+                                            </div>
+                                            <div class="music-slide-name">Танец волн</div>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="music-control G-flex-column">
+                            <div class="music-control-tools G-align-center">
+                                  <button class="control-btn  G-align-center">
+                                      <i class="icon control-icon icon-short"></i>
+                                      <span>Низкий</span>
+                                  </button>
+                                <button class="control-btn active G-align-center">
+                                    <i class="icon control-icon icon-original"></i>
+                                    <span>Оригинал</span>
+                                </button>
+                                <button class="control-btn G-align-center">
+                                     <i class="icon control-icon icon-high "></i>
+                                    <span>Высокий</span>
+                                </button>
+
+                            </div>
+                            <div class="range ">
+                                <div class="range-icon">
+                                    <img src="assets/images/volume.svg" alt="">
+                                </div>
+                                <label class="G-flex">
+                                    <input type="range" min="" max="50" value="35" class="range-input"
+                                           data-value=".value2"/>
+                                </label>
+                                <div class="value2 value"></div>
+                                <i class="icon icon-cursor "></i>
+                            </div>
+
+                        </div>
+
+
+                        <div class="music-slide-decor slide-decor--one">
+                            <img src="assets/images/slideDecor1.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--two">
+                            <img src="assets/images/slideDecor2.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--tree">
+                            <img src="assets/images/slideDecor3.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--for">
+                            <img src="assets/images/slideDecor4.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--five">
+                            <img src="assets/images/slideDecor5.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--six">
+                            <img src="assets/images/slideDecor6.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--seven">
+                            <img src="assets/images/slideDecor7.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--eight">
+                            <img src="assets/images/slideDecor8.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--nine">
+                            <img src="assets/images/slideDecor9.png" alt="">
+                        </div>
+                        <div class="music-slide-decor slide-decor--ten">
+                            <img src="assets/images/slideDecor10.png" alt="">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+        </section>
+
+
+        <section class="transform-text-section ">
+            <div class="container">
+                <div class="transform-text-body G-align-center">
+                    <div class="transform-text-info">
+                        <h2 class="transform-text-title section-title">
+                            Создавай музыку
+                            <span>без лишних усилий</span>
+                        </h2>
+                        <p class="transform-text">
+                            Забудь о сложностях в написании треков. Нейросеть мгновенно создает музыкальные композиции
+                            для любых целей — будь то саундтрек, инструментал или расслабляющая мелодия. Наслаждайся!
+                        </p>
+                        <div class="transform-text-tools G-align-center">
+                            <button class="transform-btn btn-gradient">Начать чат</button>
+                            <button class="transform-btn btn-black-gradient">Другие возможности</button>
+                        </div>
+                    </div>
+                    <div class="transform-text-picture G-flex">
+                        <img class="transform-picture-desktop " src="assets/images/MacBook%20Pro.png" alt="">
+                        <img class="transform-picture-mobile " src="assets/images/Phone.png" alt="">
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="forWhom" class="advantages-section big-container section">
+            <div class="container">
+                <div class="advantages-body">
+                    <h2 class="advantages section-title">Преимущества Satellite AI</h2>
+                    <div class="advantages-items block-cnt G-align-center">
+                        <div class="advantages-item">
+                            <h3 class=" advantages-item-title block-title">Мгновенное создание треков</h3>
+                            <p class="advantages-sub-width advantages-sub-title block-sub-title">
+                                Нейросеть быстро и точно создает музыкальные композиции, позволяя тебе экономить время и
+                                сразу наслаждаться результатом
+                            </p>
+                            <div class="advantages-item-img G-flex">
+                                <img src="assets/images/Audio%20File.png" alt="">
+                            </div>
+                        </div>
+                        <div class="advantages-item">
+                            <h3 class=" advantages-item-title block-title">Полная персонализация</h3>
+                            <p class="advantages-sub-title block-sub-title">
+                                Настраивай музыку под себя! Выбирай <span> жанры, настраивай инструменты и темп,</span>
+                                чтобы получить
+                                трек, идеально соответствующий твоим ожиданиям
+                            </p>
+                            <div class="item-img-height advantages-item-img G-flex">
+                                <img src="assets/images/musicFile.png" alt="">
+                            </div>
+                        </div>
+                        <div class="advantages-item">
+                            <h3 class=" advantages-item-title block-title">Безграничные возможности</h3>
+                            <p class="advantages-sub-title block-sub-title">
+                                От коротких джинглов до масштабных <span>саундтреков. Satellite AI справится</span> с
+                                любым объемом и
+                                сложностью. <span class="music-wrap-text">Создавать музыку теперь проще,</span> чем
+                                когда-либо!
+                            </p>
+                            <div class="advantages-item-img G-flex">
+                                <img src="assets/images/musicFile2.png" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="possibilities" class="possibilities-section big-container section">
+            <div class="container">
+                <div class="possibilities-body">
+                    <h2 class="possibilities-title section-title">Другие возможности Satellite AI</h2>
+                    <div class="possibilities-items block-cnt G-justify-between">
+                        <div class="possibilities-item">
+                            <h3 class="possibilities-item-title block-title">Преобразование аудио в текст</h3>
+                            <p class=" music-sub-title block-sub-title">
+                                Satellite AI анализирует аудиозапись и <span class="convert-wrap">создаёт текстовый документ</span>
+                                с описанием содержания аудио. Этот <span class="convert-wrap">процесс включает в себя распознавание</span>
+                                речи и
+                                извлечение текста из аудиофайла
+                            </p>
+                            <div class="advantages-item-img G-flex">
+                                <img src="assets/images/possibilities4.svg" alt="">
+                            </div>
+                        </div>
+                        <div class="possibilities-item">
+                            <h3 class="possibilities-item-title block-title">Создание песен</h3>
+                            <p class=" possibilities-sub-title block-sub-title">
+                                Пишите тексты песен легко и быстро! Нейросеть подберёт слова на основе мелодии или
+                                ключевых слов. Просто задайте направление - искусственный интеллект сделает остальное
+                            </p>
+                            <div class="advantages-item-img G-flex">
+                                <img src="assets/images/possibilities3.svg" alt="">
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="reviews" class="reviews-section section">
+            <div class="container">
+                <h2 class="section-title">Что говорят пользователи</h2>
+                <div class="reviews-list">
+                    <div class="reviews-body   ">
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Коршиков Игорь</h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Журналист</div>
+                                    <div class="author-profession">02 сентября</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Можно загрузить большой аудиофайл, достаточно быстрая конвертация, опрятный вид внешний
+                                и
+                                грамотная запись со знаками препинания
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Смирнова Елена</h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Менеджер</div>
+                                    <div class="author-profession">15 августа</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Очень удобно использовать этот сервис
+                                <span>для деловых встреч и совещаний. Часто</span> записываю обсуждения на диктофон,
+                                <span>а затем просто загружаю аудиофайл сюда.</span> Расшифровка получается быстрой,
+                                буквально за
+                                считаные секунды, и текст готов
+                                к использованию. Это экономит кучу времени, так как не приходится вручную прослушивать и
+                                записывать. К тому же, текст структурирован и читается легко.
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Петров Михаил</h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Преподаватель</div>
+                                    <div class="author-profession">29 июля</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Преподаю в университете и часто записываю свои лекции, чтобы потом переслушивать
+                                <span> и совершенствовать курс. Благодаря этому</span> сервису могу быстро
+                                конвертировать
+                                аудиозаписи в
+                                текст, что очень удобно. Особенно радует, что распознавание голоса очень точное (все
+                                термины
+                                улавливает верно)
+                            </div>
+                        </div>
+
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name"> Романова Виктория</h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Подкастер</div>
+                                    <div class="author-profession">08 сентября</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Пробовала много сервисов для расшифровки подкастов, но этот впечатлил больше всего.
+                                Загружаю
+                                аудиофайлы, и текст получается
+                                <span>  не только быстро, но и с отличной точностью. </span>Даже сложные термины и
+                                редкие
+                                слова
+                                распознаются без ошибок, что важно
+                                <span>для моего контента. Нравится, что результат</span> уже со знаками препинания и
+                                структурой,
+                                <span>так что текст сразу готов к публикации</span>
+                                на сайте или к редактированию
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Семенова Ольга </h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Маркетолог</div>
+                                    <div class="author-profession">12 сентября</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Для моей работы с клиентскими звонками
+                                <span> и фокус-группами этот сервис стал настоящей</span> находкой. Встречи и обсуждения
+                                записываю регулярно
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Мельников Алексей </h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Адвокат</div>
+                                    <div class="author-profession">21 октября</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Можно загружать крупные аудиофайлы,
+                                <span>и конвертация всегда проходит быстро,</span>
+                                что идеально для моей работы с клиентами
+                                <span> и свидетелями. Аудиозаписи занимают</span> несколько часов, и расшифровка вручную
+                                заняла бы уйму
+                                времени. Теперь можно сосредоточиться на анализе данных
+                            </div>
+                        </div>
+
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Васильев Дмитрий </h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Фрилансер</div>
+                                    <div class="author-profession">27 сентября</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Работаю с аудиозаписями для проектов и интервью, и этот сервис значительно облегчил мою
+                                работу. Можно загружать длинные аудиофайлы, конвертация проходит быстро, и текст выходит
+                                качественным и хорошо структурированным. Это помогает сразу приступить к анализу и
+                                редактированию, не теряя времени. Теперь тексты становятся доступны мгновенно, и это
+                                значительно повышает продуктивность работы
+                            </div>
+                        </div>
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Иванов Андрей </h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Блогер</div>
+                                    <div class="author-profession">03 ноября</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Перепробовал много сервисов для конвертации аудио в текст, но этот
+                                <span>действительно выделяется
+                            по скорости</span>
+                                и качеству. Конвертация происходит мгновенно, и текст выходит очень аккуратный,
+                                с правильной расстановкой знаков препинания. Удобно для создания интервью
+                            </div>
+                        </div>
+
+
+                        <div class="reviews-item">
+                            <div class="reviews-item-header">
+                                <div class="reviews-item-author G-justify-between">
+                                    <h3 class="reviews-author-name">Козлова Мария </h3>
+                                    <div class="reviews-stars G-align-center">
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+                                        <i class="icon icon-star"></i>
+
+                                    </div>
+                                </div>
+                                <div class="reviews-item-clue G-justify-between">
+                                    <div class="author-profession">Студентка</div>
+                                    <div class="author-profession">18 октября</div>
+
+                                </div>
+                            </div>
+                            <div class="reviews-text">
+                                Для учебы этот сервис просто незаменим.
+                                <span> Я записываю лекции на телефон и загружаю</span> сюда, чтобы получить текстовую
+                                версию. Это помогает
+                                мне не упускать важные моменты
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="reviews-tools">
+                    <button class="reviews-btn btn-gradient">Смотреть ещё</button>
+                </div>
+            </div>
+            <div class="reviews-bottom-decor">
+                <img src="assets/images/reviewsDecor.png" alt="">
+            </div>
+        </section>
+
+        <section class="suitable-everyone section">
+            <div class="container">
+                <div class="suitable-body G-justify-between">
+                    <div class="suitable-item-img G-flex">
+                        <img class="suitable-img-desktop" src="assets/images/Content%20(1).png" alt="">
+                        <img class="suitable-img-mobile" src="assets/images/suitableMobile.png" alt="">
+
+                    </div>
+                    <div class="suitable-text-item">
+                        <h3 class="section-title">Satellite AI подойдёт каждому</h3>
+                        <p class="suitable-sub-title ">
+                            Нейросеть поможет воплотить в жизнь любые музыкальные идеи. Подберите атмосферу, стиль или
+                            настроение – и получите уникальную композицию для ваших проектов.
+                            Будь то саундтрек, фоновая музыка или мелодия для вдохновения – всё создается быстро и
+                            легко.
+                        </p>
+                        <button class="suitable-btn btn-gradient">Начать чат</button>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq-section section">
+            <div class="container">
+                <h2 class="faq-title section-title">Часто задаваемые вопросы</h2>
+                <div class="faq-content  G-flex-column">
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Какие форматы аудиофайлов поддерживаются?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Мы поддерживаем большинство популярных форматов: JPEG, PNG для фото, MP4 и MOV для видео
+                        </div>
+                    </div>
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Как быстро происходит конвертация аудио в текст?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Мы поддерживаем большинство популярных форматов: JPEG, PNG для фото, MP4 и MOV для видео
+                        </div>
+                    </div>
+
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Можно ли загружать длинные аудиозаписи?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Мы поддерживаем большинство популярных форматов: JPEG, PNG для фото, MP4 и MOV для видео
+                        </div>
+                    </div>
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Какие языки и акценты поддерживает нейросеть?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Наша нейросеть поддерживает более 200 языков и акцентов, включая русский, английский,
+                            испанский, французский и многие другие. Система также адаптирована для различных
+                            региональных акцентов, что делает её универсальной для пользователей по всему миру.
+                        </div>
+                    </div>
+
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Насколько точен текст после конвертации?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Наша нейросеть поддерживает более 200 языков и акцентов, включая русский, английский,
+                            испанский, французский и многие другие. Система также адаптирована для различных
+                            региональных акцентов, что делает её универсальной для пользователей по всему миру.
+                        </div>
+                    </div>
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Можно ли отредактировать текст после расшифровки?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Наша нейросеть поддерживает более 200 языков и акцентов, включая русский, английский,
+                            испанский, французский и многие другие. Система также адаптирована для различных
+                            региональных акцентов, что делает её универсальной для пользователей по всему миру.
+                        </div>
+                    </div>
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Поддерживается ли конфиденциальность данных?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Наша нейросеть поддерживает более 200 языков и акцентов, включая русский, английский,
+                            испанский, французский и многие другие. Система также адаптирована для различных
+                            региональных акцентов, что делает её универсальной для пользователей по всему миру.
+                        </div>
+                    </div>
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Как можно использовать текст после конвертации?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Наша нейросеть поддерживает более 200 языков и акцентов, включая русский, английский,
+                            испанский, французский и многие другие. Система также адаптирована для различных
+                            региональных акцентов, что делает её универсальной для пользователей по всему миру.
+                        </div>
+                    </div>
+                    <div class="often-asks-item">
+                        <div class="asks-item-header G-justify-between">
+                            <p>Можно ли использовать сервис для расшифровки подкастов и интервью?</p>
+                            <div class="asks-list-icon G-center"></div>
+                        </div>
+                        <div class="asks-list-sub">
+                            Наша нейросеть поддерживает более 200 языков и акцентов, включая русский, английский,
+                            испанский, французский и многие другие. Система также адаптирована для различных
+                            региональных акцентов, что делает её универсальной для пользователей по всему миру.
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+        <section class="trust-section ">
+            <div class="container">
+                <div class="trust-body G-justify-between">
+                    <div class="trust-description G-align-center">
+                        <h2 class="section-title">Доверьте создание контента </h2>
+                        <a class="G-flex" href="">
+                            <img src="assets/images/logo.svg" alt="">
+
+                        </a>
+                    </div>
+                    <div class="trust-tools G-align-center">
+                        <button class="btn-gradient">Начать сейчас</button>
+                        <button class="btn-black-gradient">Другие возможности</button>
+
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-body G-justify-between">
+                <a class="footer-logo" href="audioText.html">
+                    <img src="assets/images/logo.svg" alt="">
+                </a>
+                <nav class="footer-menu">
+                    <ul class="footer-menu-list G-flex">
+                        <li>
+                            <a href="#possibilities">Возможности</a>
+                        </li>
+                        <li>
+                            <a href="#forWhom">Для кого</a>
+                        </li>
+                        <li>
+                            <a href="#reviews">Отзывы</a>
+                        </li>
+                        <li>
+                            <a href="#faq">FAQ</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <button class="btn-white footer-btn">Регистрация</button>
+
+            </div>
+            <div class="footer-clue ">
+                <span>© 2024 Satellite AI.</span>
+                <span> Все права защищены</span>
+            </div>
+        </div>
+    </footer>
+
+</div>
+<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script src="assets/js/index.js"></script>
+<script src="assets/js/swiper.js"></script>
+
+</body>
+</html>
