@@ -1,35 +1,5 @@
-/*.hero-section::after {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    width: 100%;*/
-/*    height: 200%;*/
-/*    background: linear-gradient(180deg, rgba(23, 23, 23, 0) 93.5%, #171717 100%);*/
-/*    left: 0;*/
-/*    bottom: 0;*/
 
-/*}*/
-/*.hero-section::before {*/
-/*    content: "";*/
-/*    position: absolute;*/
-/*    width: 200%;*/
-/*    height: 200%;*/
-/*    background: linear-gradient(180deg, rgba(23, 23, 23, 0) 93.5%, #171717 100%);*/
-/*    left: 0;*/
-/*    top: 0;*/
 
-/*}*/
-
-.hero-section {
-    width: 100%;
-    min-height: 722px;
-    position: relative;
-    background-image: url('../images/heroDecor.png');
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    margin-top: 116px;
-
-}
 
 .audio-top-titles {
     max-width: 406px;
@@ -70,7 +40,7 @@
 
 }
 
-.audio-info-title{
+.audio-info-title {
     max-width: 293px;
 
 }
@@ -110,7 +80,8 @@
     top: 0;
     left: 250px;
 }
-.audio-file--for{
+
+.audio-file--for {
     top: 0;
     right: -60px;
 }
@@ -185,6 +156,8 @@
     border-radius: 20px;
     gap: 15px;
     box-shadow: 0px 0px 0px 2px rgba(255, 255, 255, 0.04), 0px 0px 16px 0px rgba(255, 255, 255, 0);
+    position: relative;
+    z-index: 3;
 }
 
 
@@ -208,6 +181,10 @@
     align-items: center;
 }
 
+.hero-graphics {
+    margin-top: 25px;
+}
+
 .hero-graphics-mobile {
     display: none;
 }
@@ -218,6 +195,9 @@
     line-height: 12px;
     color: rgba(255, 255, 255, 0.5);
     max-width: 479px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
 
 }
 
@@ -247,6 +227,30 @@
     display: block;
 }
 
+.lecture-biology-tools {
+    position: relative;
+    z-index: 3;
+}
+
+.audio-text-wrap {
+    display: block;
+}
+
+.lecture-file-mobile {
+    display: none;
+    position: absolute;
+
+}
+
+.file-mobile--one {
+    top: 0;
+    right: 0;
+}
+
+.file-mobile--two {
+    top: 103px;
+    left: -5px;
+}
 
 @media (min-width: 1400px) {
 }
@@ -262,6 +266,15 @@
     .lecture-biology {
         flex-direction: column;
         border-radius: 20px;
+    }
+
+    .lecture-biology-tools {
+        width: 100%;
+    }
+
+    .lecture-biology-texts {
+        max-width: 100%;
+
     }
 }
 
@@ -285,12 +298,18 @@
         align-items: center;
     }
 
+    .lecture-audio-file {
+        display: none;
+    }
+
     .hero-top-titles {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-
+    .hero-main-title{
+        text-align: center;
+    }
 }
 
 
@@ -299,10 +318,18 @@
     .hero-main-title {
         font-size: 26px;
         line-height: 30px;
-        max-width: 260px;
         text-align: center;
+    }
+
+    .audio-main-title {
+        max-width: 260px;
 
     }
+
+    .audio-wrap-mobile {
+        display: block;
+    }
+
 
     .transform-picture-mobile {
         display: block;
@@ -322,17 +349,19 @@
         border-radius: 15px;
     }
 
-    .hero-section {
-        min-height: 884px;
-        position: relative;
-        background-image: url('../images/coverMobile.png');
-        margin-top: 95px;
 
+
+    .audio-main-section {
+        min-height: 884px;
     }
 
     .audio-info-title {
         max-width: 254px;
 
+    }
+
+    .lecture-file-mobile {
+        display: block;
     }
 
     .biology-tools-file {
@@ -352,6 +381,10 @@
         line-height: 12px;
 
 
+    }
+
+    .hero-graphics {
+        margin-top: 15px;
     }
 
     .hero-graphics-desktop {

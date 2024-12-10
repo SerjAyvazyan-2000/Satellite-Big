@@ -1,0 +1,62 @@
+
+.song-info-title {
+    max-width: 366px;
+}
+
+.song-generator-media {
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.song-media-mobile {
+    display: none;
+}
+
+.song-sub-width {
+    max-width: 326px;
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+
+}
+
+@media (max-width: 992px) {
+
+
+}
+
+@media (max-width: 768px) {
+
+}
+
+@media (max-width: 576px) {
+    .song-media-mobile {
+        display: block;
+        border-radius: 20px;
+
+    }
+
+    .song-block-title span {
+        display: block;
+    }
+
+    .song-info-title {
+        max-width: 268px;
+    }
+
+    .song-media-desktop {
+        display: none;
+    }
+
+    .song-generator-media {
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 410px) {
+
+}

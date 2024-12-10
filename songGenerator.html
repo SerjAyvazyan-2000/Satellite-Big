@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Music Generator</title>
+    <title>Song Generator</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
 
@@ -68,13 +68,14 @@
 
 
     <main class="main">
-        <section class="music-hero-section hero-section  ">
+        <section class="hero-section section ">
             <div class="container">
                 <div class="hero-body">
                     <div class="hero-top-block G-flex">
                         <div class='music-top-titles'>
                             <h1 class='hero-main-title'>
-                                Создавай <span class="audio-title-gradient">уникальную</span> музыку за секунды
+                                Создавай <span class="audio-title-gradient">уникальные</span> песни за секунды
+
                             </h1>
 
                             <button class='hero-register btn-gradient'>Зарегистрироваться</button>
@@ -82,149 +83,24 @@
                         </div>
 
                         <div class='hero-top-info '>
-                            <h3 class='music-info-title hero-info-title'>
-                                Открой для себя генерацию музыкальных композиций любой длины. Быстро, качественно,
-                                вдохновляюще
+                            <h3 class='song-info-title hero-info-title'>
+                                Открой для себя генерацию песен любой сложности
+                                <span>и стиля. Быстро, вдохновляюще,
+                                профессионально</span>
                             </h3>
                             <div class='hero-graphics G-align-center'>
-                                <img class="hero-graphics-desktop" src="assets/images/musicGrapics.svg" alt="">
-                                <img class="hero-graphics-mobile" src="assets/images/musicGrapicsMobile.svg" alt="">
+                                <img class="hero-graphics-desktop" src="assets/images/songGrapics.svg" alt="">
+                                <img class="hero-graphics-mobile" src="assets/images/songGrapicsMobile.svg" alt="">
 
                             </div>
                         </div>
 
                     </div>
 
-                    <div class='music-slide-box '>
-                        <div class="music-generate-slides">
-                            <div class="music-generate-swiper swiper">
-                                <div class=" swiper-wrapper">
-                                    <div class="swiper-slide">
-                                        <div class="music-slide">
-                                            <div class="music-slide-img">
-                                                <img src="assets/images/musicSlide6.png" alt="">
-                                            </div>
-                                            <div class="music-slide-name">Космическая одиссея</div>
-                                        </div>
-                                    </div>
+                    <div class="song-generator-media G-flex">
+                        <img class="song-media-desktop" src="assets/images/Interface.png" alt="">
+                        <img class="song-media-mobile" src="assets/images/InterfaceMobile.png" alt="">
 
-                                    <div class="swiper-slide">
-                                        <div class="music-slide">
-                                            <div class="music-slide-img">
-                                                <img src="assets/images/musicSlide5.png" alt="">
-                                            </div>
-                                            <div class="music-slide-name">Мгновение вечно</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="music-slide">
-                                            <div class="music-slide-img">
-                                                <img src="assets/images/musicSlide4.png" alt="">
-                                            </div>
-                                            <div class="music-slide-name">Краски лета</div>
-                                        </div>
-                                    </div>
-
-                                    <div class="swiper-slide">
-                                        <div class="music-slide">
-                                            <div class="music-slide-img">
-                                                <img src="assets/images/musicSlide1.png" alt="">
-                                            </div>
-                                            <div class="music-slide-name">Обнимая небо</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="music-slide">
-                                            <div class="music-slide-img">
-                                                <img src="assets/images/musicSlide2.png" alt="">
-                                            </div>
-                                            <div class="music-slide-name">Единственная</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="music-slide">
-                                            <div class="music-slide-img">
-                                                <img src="assets/images/musicSlide3.png" alt="">
-                                            </div>
-                                            <div class="music-slide-name">Дождь из роз</div>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide">
-                                        <div class="music-slide">
-                                            <div class="music-slide-img">
-                                                <img src="assets/images/musicSlide7.png" alt="">
-                                            </div>
-                                            <div class="music-slide-name">Танец волн</div>
-                                        </div>
-                                    </div>
-
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div class="music-control G-flex-column">
-                            <div class="music-control-tools G-align-center">
-                                  <button class="control-btn  G-align-center">
-                                      <i class="icon control-icon icon-short"></i>
-                                      <span>Низкий</span>
-                                  </button>
-                                <button class="control-btn active G-align-center">
-                                    <i class="icon control-icon icon-original"></i>
-                                    <span>Оригинал</span>
-                                </button>
-                                <button class="control-btn G-align-center">
-                                     <i class="icon control-icon icon-high "></i>
-                                    <span>Высокий</span>
-                                </button>
-
-                            </div>
-                            <div class="range ">
-                                <div class="range-icon">
-                                    <img src="assets/images/volume.svg" alt="">
-                                </div>
-                                <label class="G-flex">
-                                    <input type="range" min="" max="50" value="35" class="range-input"
-                                           data-value=".value2"/>
-                                </label>
-                                <div class="value2 value"></div>
-                                <i class="icon icon-cursor "></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="music-slide-decor slide-decor--one">
-                            <img src="assets/images/slideDecor1.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--two">
-                            <img src="assets/images/slideDecor2.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--tree">
-                            <img src="assets/images/slideDecor3.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--for">
-                            <img src="assets/images/slideDecor4.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--five">
-                            <img src="assets/images/slideDecor5.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--six">
-                            <img src="assets/images/slideDecor6.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--seven">
-                            <img src="assets/images/slideDecor7.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--eight">
-                            <img src="assets/images/slideDecor8.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--nine">
-                            <img src="assets/images/slideDecor9.png" alt="">
-                        </div>
-                        <div class="music-slide-decor slide-decor--ten">
-                            <img src="assets/images/slideDecor10.png" alt="">
-                        </div>
                     </div>
 
 
@@ -238,13 +114,12 @@
             <div class="container">
                 <div class="transform-text-body G-align-center">
                     <div class="transform-text-info">
-                        <h2 class="transform-text-title ">
-                            Создавай музыку
-                            <span>без лишних усилий</span>
+                        <h2 class="song-block-title transform-text-title ">
+                            Твоя музыка — <span>легко и быстро</span>
                         </h2>
                         <p class="transform-text">
-                            Забудь о сложностях в написании треков. Нейросеть мгновенно создает музыкальные композиции
-                            для любых целей — будь то саундтрек, инструментал или расслабляющая мелодия. Наслаждайся!
+                            Забудь о сложностях создания треков. Нейросеть за секунды генерирует музыкальные композиции
+                            для любых целей: саундтреки, инструменталы или атмосферные мелодии. Твори с удовольствием!
                         </p>
                         <div class="transform-text-tools G-align-center">
                             <button class="transform-btn btn-gradient">Начать чат</button>
@@ -252,7 +127,7 @@
                         </div>
                     </div>
                     <div class="transform-text-picture G-flex">
-                        <img class="transform-picture-desktop " src="assets/images/MacBook%20Pro.png" alt="">
+                        <img class="transform-picture-desktop " src="assets/images/MacBook.png" alt="">
                         <img class="transform-picture-mobile " src="assets/images/Phone.svg" alt="">
 
                     </div>
@@ -266,10 +141,13 @@
                     <h2 class="advantages section-title">Преимущества Satellite AI</h2>
                     <div class="advantages-items block-cnt G-align-center">
                         <div class="advantages-item">
-                            <h3 class=" advantages-item-title block-title">Мгновенное создание треков</h3>
-                            <p class="advantages-sub-width advantages-sub-title block-sub-title">
-                                Нейросеть быстро и точно создает музыкальные композиции, позволяя тебе экономить время и
-                                сразу наслаждаться результатом
+                            <h3 class=" advantages-item-title block-title">Мгновенное создание песен</h3>
+                            <p class="song-sub-width advantages-sub-title block-sub-title">
+                                Не нужно тратить часы на сложные музыкальные программы — нейросеть
+                                <span>создаст готовый трек
+                                за считанные </span>
+                                <span>секунды. Просто загрузите свои</span>
+                                пожелания и наслаждайтесь!
                             </p>
                             <div class="advantages-item-img G-flex">
                                 <img src="assets/images/Audio%20File.png" alt="">
@@ -278,11 +156,12 @@
                         <div class="advantages-item">
                             <h3 class=" advantages-item-title block-title">Полная персонализация</h3>
                             <p class="advantages-sub-title block-sub-title">
-                                Настраивай музыку под себя! Выбирай <span> жанры, настраивай инструменты и темп,</span>
-                                чтобы получить
-                                трек, идеально соответствующий твоим ожиданиям
+                                <span> Выбирай стиль, инструмент и</span> настроение: будь то гитара, энергичный
+                                <span>хип-хоп или
+                                расслабляющий эмбиент.</span>
+                                <span>Создавай музыку, идеально подходящую</span>
+                                под твои задумки
                             </p>
-
                             <div class="item-img-height advantages-item-img G-flex">
                                 <img class="file-desktop" src="assets/images/musicFile.png" alt="">
                                 <img class="file-mobile" src="assets/images/songFileMobile.svg" alt="">
@@ -291,10 +170,8 @@
                         <div class="advantages-item">
                             <h3 class=" advantages-item-title block-title">Безграничные возможности</h3>
                             <p class="advantages-sub-title block-sub-title">
-                                От коротких джинглов до масштабных <span>саундтреков. Satellite AI справится</span> с
-                                любым объемом и
-                                сложностью. <span class="music-wrap-text">Создавать музыку теперь проще,</span> чем
-                                когда-либо!
+                                От коротких джинглов до масштабных саундтреков. Нейросеть справится с любыми задачами,
+                                делая процесс создания музыки проще и увлекательнее
                             </p>
                             <div class="advantages-item-img G-flex">
                                 <img src="assets/images/musicFile2.png" alt="">
@@ -310,7 +187,7 @@
             <div class="container">
                 <div class="possibilities-body">
                     <h2 class="possibilities-title section-title">Другие возможности Satellite AI</h2>
-                    <div class="possibilities-items block-cnt G-flex">
+                    <div class="possibilities-items block-cnt G-justify-between">
                         <div class="possibilities-item">
                             <h3 class="possibilities-item-title block-title">Преобразование аудио в текст</h3>
                             <p class=" music-sub-title block-sub-title">
@@ -324,13 +201,14 @@
                             </div>
                         </div>
                         <div class="possibilities-item">
-                            <h3 class="possibilities-item-title block-title">Создание песен</h3>
+                            <h3 class="possibilities-item-title block-title">Генерация музыки</h3>
                             <p class=" possibilities-sub-title block-sub-title">
-                                Пишите тексты песен легко и быстро! Нейросеть подберёт слова на основе мелодии или
-                                ключевых слов. Просто задайте направление - искусственный интеллект сделает остальное
+                                Создавайте уникальные музыкальные треки вместе с нейросетью! Задайте нужные параметры –
+                                мелодию, гармонию, ритм – и получите оригинальную композицию, которая идеально впишется
+                                в ваш проект
                             </p>
                             <div class="advantages-item-img G-flex">
-                                <img src="assets/images/possibilities3.svg" alt="">
+                                <img src="assets/images/possibilities5.png" alt="">
                             </div>
                         </div>
 
@@ -629,10 +507,10 @@
                     <div class="suitable-text-item">
                         <h3 class="section-title">Satellite AI подойдёт каждому</h3>
                         <p class="suitable-sub-title ">
-                            Нейросеть поможет воплотить в жизнь любые музыкальные идеи. Подберите атмосферу, стиль или
-                            настроение – и получите уникальную композицию для ваших проектов.
-                            Будь то саундтрек, фоновая музыка или мелодия для вдохновения – всё создается быстро и
-                            легко.
+                            Нейросеть поможет придумать оригинальные тексты и мелодии для песен в любом жанре. Напишите
+                            историю, которая зазвучит,
+                            или создайте хит для вашего проекта. Удобный инструмент для авторов, музыкантов и просто
+                            любителей творчества.
                         </p>
                         <button class="suitable-btn btn-gradient">Начать чат</button>
                     </div>
