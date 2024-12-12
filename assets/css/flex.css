@@ -13,6 +13,12 @@
     align-items: center;
     display: flex;
 }
+.G-column-center {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
 .G-image{
     background-size: cover;
     background-position: center;

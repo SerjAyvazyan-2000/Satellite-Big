@@ -3,11 +3,9 @@
 @import 'assets/images/icon/icon.css';
 @import 'assets/font/fonts.css';
 @import 'assets/css/flex.css';
-@import 'assets/css/bem.css';
-
+@import 'assets/css/home.css';
 @import 'assets/css/header.css';
 @import 'assets/css/footer.css';
-@import 'assets/css/home.css';
-@import 'assets/css/musicGenerator.css';
-@import 'assets/css/songGenerator.css';
+@import 'assets/css/createVideo.css';
+
 

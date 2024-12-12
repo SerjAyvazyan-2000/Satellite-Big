@@ -60,19 +60,6 @@ window.addEventListener('scroll', function() {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    let elem = document.querySelector('.reviews-body');
-    let msnry = new Masonry( elem, {
-        itemSelector: '.reviews-item',
-        columnWidth: 200,
-        gutter: 3,
-        percentPosition: true,
-
-    });
-
-
-
-});
 
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector('.reviews-btn');
@@ -94,7 +81,6 @@ function toggleActiveState(item) {
         }
     });
 
-    // Переключаем активный класс только для выбранного элемента
     item.classList.toggle('active');
 }
 
@@ -108,23 +94,67 @@ document.querySelectorAll('.often-asks-item').forEach(item => {
 });
 
 
-document.querySelectorAll('.range-input').forEach((sliderEl) => {
-    const valueDisplay = document.querySelector(sliderEl.getAttribute('data-value'));
+document.querySelectorAll('.hero-video-block').forEach(block => {
+    const gif = block.getAttribute('data-gif');
+    const defaultImage = block.getAttribute('data-img');
 
-    // Инициализация текущих значений на старте
-    updateSlider(sliderEl, valueDisplay);
 
-    // Добавляем слушатель на изменение
-    sliderEl.addEventListener('input', () => updateSlider(sliderEl, valueDisplay));
+
+    function playGif() {
+        if (block) {
+            block.style.backgroundImage = `url('${gif}')`;
+            block.classList.add('active');
+        }
+
+    }
+
+    function endGif() {
+        block.classList.remove('active');
+        block.style.backgroundImage = `url('${defaultImage}')`;
+
+    }
+
+    block.addEventListener('mouseenter', playGif);
+    block.addEventListener('mouseleave', endGif);
+
 });
 
-function updateSlider(slider, valueDisplay) {
-    const tempSliderValue = slider.value;
-    valueDisplay.textContent = tempSliderValue;
-
-    const progress = (tempSliderValue / slider.max) * 100;
-    // background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
 
 
-    slider.style.background = `linear-gradient(to right, #8A3EDF ${progress}%, #ccc ${progress}%)`;
-}
+
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector('.reviews-btn');
+    const reviewsList = document.querySelector('.reviews-list');
+
+    button.addEventListener('click', function() {
+        reviewsList.classList.toggle('active');
+    });
+});
+
+
+document.addEventListener("DOMContentLoaded", () => {
+    const button = document.querySelector(".reviews-btn");
+    const row2 = document.querySelectorAll(".reviews-row-2");
+    const row3 = document.querySelectorAll(".reviews-row-3");
+    let clickCount = 0;
+
+    button.addEventListener("click", () => {
+        clickCount++;
+
+        if (clickCount === 1) {
+            row2.forEach(row => row.classList.add("active"));
+        } else if (clickCount === 2) {
+            row3.forEach(row => row.classList.add("active"));
+            button.classList.add("active");
+            button.querySelector("span").textContent = "Свернуть";
+        } else {
+
+            row2.forEach(row => row.classList.remove("active"));
+            row3.forEach(row => row.classList.remove("active"));
+            button.classList.remove("active");
+            button.querySelector("span").textContent = "Показать еще";
+            clickCount = 0;
+        }
+    });
+});
+

@@ -21,8 +21,8 @@
     -webkit-mask-image: url(star.svg);
 }
 .icon-short{
-    mask-image: url(short.svg);
-    -webkit-mask-image: url(short.svg);
+    mask-image: url(Short.svg);
+    -webkit-mask-image: url(Short.svg);
 }
 .icon-high{
     mask-image: url(high.svg);
