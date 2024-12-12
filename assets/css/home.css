@@ -5,11 +5,32 @@
     margin: 0 auto;
 }
 
+.snake-container {
+    display: flex;
+    flex-direction: column-reverse; /* Чтобы звенья двигались снизу вверх */
+    gap: 6px; /* Расстояние между звеньями */
+    height: 912px; /* Высота как в макете */
+    width: 12px; /* Ширина контейнера */
+    position: absolute;
+    left: 50%;
+    top: 0;
+    z-index: 10;
+}
+
+.link {
+    width: 12px; /* Ширина звена */
+    height: 30px; /* Высота звена */
+    background-color: #8A3EDF; /* Цвет звена */
+    opacity: 0; /* Изначально прозрачное */
+    border-radius: 50%; /* Круглая форма */
+}
+
 .wrapper {
     overflow: hidden;
     display: flex;
     flex-direction: column;
     min-height: 100%;
+    position: relative;
 }
 
 .main {
@@ -97,7 +118,8 @@
     mask-composite: exclude;
     z-index: -1;
 }
-.logo-mobile{
+
+.logo-mobile {
     display: none;
 }
 
@@ -243,7 +265,8 @@
     position: relative;
     cursor: pointer;
 }
-.video-block{
+
+.video-block {
     max-width: 1180px;
     width: 100%;
     height: 540px;
@@ -286,7 +309,8 @@
     transition: .3s;
 
 }
-.video-block::after{
+
+.video-block::after {
     position: absolute;
     content: '';
     width: 100%;
@@ -1338,14 +1362,17 @@
     text-align: left;
     max-width: 375px;
 }
-.hero-faces-body{
+
+.hero-faces-body {
     padding-top: 116px;
     position: relative;
     z-index: 1;
 }
-.faces-create-title{
+
+.faces-create-title {
     max-width: 192px;
 }
+
 @media (max-width: 1400px) {
 }
 
@@ -1424,7 +1451,8 @@
         height: 440px;
 
     }
-    .video-block{
+
+    .video-block {
         max-width: 800px;
         height: 440px;
     }
@@ -1499,9 +1527,11 @@
         position: relative;
 
     }
-    .hero-faces-body{
+
+    .hero-faces-body {
         padding-top: 88px;
     }
+
     .music-hero-section::after {
         height: 130%;
 
@@ -1697,13 +1727,15 @@
         line-height: 30px;
         text-align: left;
     }
-    .logo-mobile{
+
+    .logo-mobile {
         display: block;
     }
 
-    .logo-desktop{
+    .logo-desktop {
         display: none;
     }
+
     .create-videos-items {
         margin-top: 40px;
     }
@@ -1801,6 +1833,7 @@
         border-radius: 15px;
 
     }
+
     .video-block::after {
         backdrop-filter: blur(5px);
         border-radius: 15px;
@@ -1817,6 +1850,7 @@
         position: relative;
 
     }
+
     .video-block {
         max-width: 320px;
         width: 100%;
@@ -1990,9 +2024,11 @@
         height: 100px;
 
     }
-    .faces-create-title{
+
+    .faces-create-title {
         max-width: 100%;
     }
+
     .create-item-icon {
         width: 44px;
         height: 44px;
