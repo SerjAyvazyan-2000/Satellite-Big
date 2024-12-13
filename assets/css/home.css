@@ -39,9 +39,11 @@
     animation: move-up2 5s linear infinite;
     animation-delay: 3s;
     opacity: 0;
+    visibility: hidden;
 }
 .animation-another-box.active{
     opacity: 1;
+    visibility: visible;
 
 }
 .animation--one {
