@@ -1,5 +1,6 @@
 // Все звенья
 const links = document.querySelectorAll(".animation-box");
+
 const totalLinks = links.length; // Всего звеньев
 const snakeLength = 7; // Длина одной змейки
 const opacitySteps = [0.25, 0.5, 0.75, 1, 0.75, 0.5, 0.25]; // Значения прозрачности
@@ -19,6 +20,7 @@ function updateSnake(startIndex, snakeLength, colorClass) {
         const index = (startIndex + i) % totalLinks; // Цикличность
         links[index].style.opacity = opacity;
         links[index].classList.add(colorClass); // Добавляем цвет
+
     }
 }
 
@@ -31,3 +33,14 @@ setInterval(() => {
     firstSnakeIndex = (firstSnakeIndex + 1) % totalLinks;
     secondSnakeIndex = (secondSnakeIndex + 1) % totalLinks;
 }, 200);
+
+
+
+
+document.querySelectorAll('.animation-another-box').forEach(box => {
+    box.addEventListener('animationstart', () => {
+        // Добавляем класс "active", чтобы элемент стал видимым
+        box.classList.add('active');
+    });
+});
+

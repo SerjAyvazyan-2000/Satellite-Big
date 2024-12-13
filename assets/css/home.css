@@ -4,6 +4,15 @@
     width: 100%;
     margin: 0 auto;
 }
+.animation-mobile{
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
 
 .hero-animation {
     position: absolute;
@@ -11,6 +20,7 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+
 }
 
 .animation-box {
@@ -21,11 +31,24 @@
     animation: move-up 5s linear infinite;
     animation-delay: 0.5s;
 }
+.animation-another-box{
+    width: 10px;
+    height: 28px;
+    background: rgba(138, 62, 223, 1);
+    box-shadow: 0px 0px 12px 8px rgba(138, 62, 223, 0.25);
+    animation: move-up2 5s linear infinite;
+    animation-delay: 3s;
+    opacity: 0;
+}
+.animation-another-box.active{
+    opacity: 1;
 
+}
 .animation--one {
     left: -100px;
     top: 0;
 }
+
 
 .animation--two {
     left: 100px;
@@ -53,20 +76,6 @@
     top: 0;
 }
 
-/*.animation-box:nth-child(1) {*/
-/*    animation-delay: 0.4s;*/
-/*}*/
-/*.animation-box:nth-child(2) {*/
-/*    animation-delay: 0.5s;*/
-/*}*/
-
-/*.animation-box:nth-child(3) {*/
-/*    animation-delay:0.6s;*/
-/*}*/
-
-/*.animation-box:nth-child(4) {*/
-/*    animation-delay:0.7s;*/
-/*}*/
 
 
 @keyframes move-up {
@@ -74,10 +83,17 @@
         transform: translateY(100vh);
     }
     100% {
-        transform: translateY(-250px);
+        transform: translateY(-350px);
     }
 }
-
+@keyframes move-up2 {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-350px);
+    }
+}
 
 .snake-container {
     display: flex;
@@ -1276,10 +1292,12 @@
 .faq-section {
     padding-bottom: 60px;
 }
-.face-faq-section{
+
+.face-faq-section {
     padding-bottom: 100px;
 
 }
+
 .often-asks-item.active .asks-list-icon {
     background: linear-gradient(86.94deg, #6356FE 0.62%, #764AEF 30.62%, #8A3EDF 61.67%, #A330CB 99.38%);
 }
@@ -1612,8 +1630,26 @@
         align-items: flex-start;
     }
 
+    .animation--one {
+        left: 20px;
+        top: 0;
+    }
+
+    .animation--two {
+        right: 20px;
+        top: 200px;
+        left: unset;
+    }
+
+
+
+
     .faces-sub-title {
         max-width: 263px;
+    }
+
+    .hero-animation {
+        display: none;
     }
 
     .photo-music-title {
@@ -2048,7 +2084,8 @@
     .faq-section {
         padding-bottom: 48px;
     }
-    .face-faq-section{
+
+    .face-faq-section {
         padding-bottom: 80px;
 
     }
