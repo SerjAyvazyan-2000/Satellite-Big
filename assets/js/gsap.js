@@ -27,7 +27,6 @@ function updateSnake(startIndex, snakeLength, colorClass) {
 
 // Анимация с интервалом 0.2 секунды
 setInterval(() => {
-    // Первая змейка (фиолетовая)
     updateSnake(firstSnakeIndex, snakeLength, "purple");
 
     // Вторая змейка (белая)
