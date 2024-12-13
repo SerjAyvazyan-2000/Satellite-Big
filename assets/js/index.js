@@ -94,53 +94,27 @@ document.querySelectorAll('.often-asks-item').forEach(item => {
 });
 
 
-document.querySelectorAll('.hero-video-block').forEach(block => {
-    const gif = block.getAttribute('data-gif');
-    const defaultImage = block.getAttribute('data-img');
+function setupGifToggle(selector) {
+    document.querySelectorAll(selector).forEach(block => {
+        const gif = block.getAttribute('data-gif');
+        const defaultImage = block.getAttribute('data-img');
 
-    function playGif() {
-        if (block) {
-            block.style.backgroundImage = `url('${gif}')`;
-            block.classList.add('active');
+        function toggleGif() {
+            if (block.classList.contains('active')) {
+                block.classList.remove('active');
+                block.style.backgroundImage = `url('${defaultImage}')`;
+            } else {
+                block.classList.add('active');
+                block.style.backgroundImage = `url('${gif}')`;
+            }
         }
 
-    }
+        block.addEventListener('click', toggleGif);
+    });
+}
 
-    function endGif() {
-        block.classList.remove('active');
-        block.style.backgroundImage = `url('${defaultImage}')`;
-
-    }
-
-    block.addEventListener('mouseenter', playGif);
-    block.addEventListener('mouseleave', endGif);
-
-});
-
-document.querySelectorAll('.video-block').forEach(block => {
-    const gif = block.getAttribute('data-gif');
-    const defaultImage = block.getAttribute('data-img');
-
-    function playGif() {
-        if (block) {
-            block.style.backgroundImage = `url('${gif}')`;
-            block.classList.add('active');
-        }
-
-    }
-
-    function endGif() {
-        block.classList.remove('active');
-        block.style.backgroundImage = `url('${defaultImage}')`;
-
-    }
-
-    block.addEventListener('mouseenter', playGif);
-    block.addEventListener('mouseleave', endGif);
-
-});
-
-
+setupGifToggle('.hero-video-block');
+setupGifToggle('.video-block');
 
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector('.reviews-btn');
