@@ -14,9 +14,10 @@
 }
 
 .animation-box {
-    width: 12px;
+    width: 10px;
     height: 28px;
     background: rgba(138, 62, 223, 1);
+    box-shadow: 0px 0px 12px 8px rgba(138, 62, 223, 0.25);
     animation: move-up 5s linear infinite;
     animation-delay: 0.5s;
 }
@@ -73,7 +74,7 @@
         transform: translateY(100vh);
     }
     100% {
-        transform: translateY(-150px);
+        transform: translateY(-250px);
     }
 }
 
