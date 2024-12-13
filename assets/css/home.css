@@ -5,11 +5,86 @@
     margin: 0 auto;
 }
 
+.hero-animation {
+    position: absolute;
+    z-index: -1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.animation-box {
+    width: 12px;
+    height: 28px;
+    background: rgba(138, 62, 223, 1);
+    animation: move-up 5s linear infinite;
+    animation-delay: 0.5s;
+
+
+}
+
+.animation--one {
+    left: -100px;
+    top: 0;
+}
+
+.animation--two {
+    left: 100px;
+    top: 100px;
+}
+
+.animation--tree {
+    left: 500px;
+    top: 200px;
+
+}
+
+.animation--for {
+    right: 500px;
+    top: -100px;
+}
+
+.animation--five {
+    right: 200px;
+    top: 100px;
+}
+
+.animation--six {
+    right: -100px;
+    top: 0;
+}
+
+/*.animation-box:nth-child(1) {*/
+/*    animation-delay: 0.4s;*/
+/*}*/
+/*.animation-box:nth-child(2) {*/
+/*    animation-delay: 0.5s;*/
+/*}*/
+
+/*.animation-box:nth-child(3) {*/
+/*    animation-delay:0.6s;*/
+/*}*/
+
+/*.animation-box:nth-child(4) {*/
+/*    animation-delay:0.7s;*/
+/*}*/
+
+
+@keyframes move-up {
+    0% {
+        transform: translateY(100vh);
+    }
+    100% {
+        transform: translateY(-150px);
+    }
+}
+
+
 .snake-container {
     display: flex;
-    flex-direction: column-reverse; /* Чтобы звенья двигались снизу вверх */
-    gap: 6px; /* Расстояние между звеньями */
-    height: 912px; /* Высота как в макете */
+    flex-direction: column-reverse;
+    gap: 6px;
+    height: 912px;
     width: 12px;
     position: absolute;
     left: 50%;
@@ -18,13 +93,20 @@
 }
 
 .link {
-    width: 12px; /* Ширина звена */
-    height: 30px; /* Высота звена */
-    background-color: #8A3EDF; /* Цвет звена */
-    opacity: 0; /* Изначально прозрачное */
-    border-radius: 50%; /* Круглая форма */
+    width: 12px;
+    height: 28px;
+    background: rgba(138, 62, 223, 0.5);
+    opacity: 0;
+    transition: opacity 0.2s, background-color 0.2s; /* Гладкая анимация */
+}
+.link.purple{
+    background: rgba(138, 62, 223, 0.5);
+
 }
 
+.link.white {
+    background-color: #FFFFFF;
+}
 .wrapper {
     overflow: hidden;
     display: flex;

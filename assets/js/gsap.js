@@ -1,36 +1,39 @@
+// Все звенья
 const links = document.querySelectorAll(".link");
+const totalLinks = links.length; // Всего звеньев
+const snakeLength = 7; // Длина одной змейки
+const opacitySteps = [0.25, 0.5, 0.75, 1, 0.75, 0.5, 0.25]; // Значения прозрачности
 
-// Массив значений прозрачности
-const opacitySteps = [0.25, 0.5, 0.75, 1, 0.75, 0.5, 0.25];
+let firstSnakeIndex = 0; // Начало первой змейки
+let secondSnakeIndex = 13; // Начало второй змейки
 
-// Переменные для управления
-let currentIndex = 0; // Начальный индекс для первой змейки
-let secondSnakeIndex = 13; // Начальный индекс для второй змейки
-
-// Функция для обновления прозрачности
-function updateSnake(startIndex, snakeLength) {
-    // Сначала сбрасываем opacity для всех звеньев
+function updateSnake(startIndex, snakeLength, colorClass) {
+    // Сбрасываем все звенья
     links.forEach((link) => {
-        link.style.opacity = 0;
+        // link.style.opacity = 0; // Прозрачность по умолчанию
+        link.style.transform = "scale(1)"; // Сбрасываем масштаб
+        link.classList.remove(colorClass); // Убираем цвет
     });
 
-    // Устанавливаем прозрачности для "змейки"
+    // Обновляем звенья змейки
     for (let i = 0; i < snakeLength; i++) {
-        const currentOpacity = opacitySteps[i % opacitySteps.length];
-        const elementIndex = (startIndex + i) % links.length;
-        links[elementIndex].style.opacity = currentOpacity;
+        const opacity = opacitySteps[i % opacitySteps.length];
+        const index = (startIndex + i) % totalLinks; // Цикличность
+        links[index].style.opacity = opacity;
+        links[index].style.transform = "scale(1.2)"; // Увеличиваем масштаб для "шага"
+        links[index].classList.add(colorClass); // Добавляем цвет
     }
 }
 
-// Запускаем анимацию с помощью setInterval
+// Анимация с интервалом 0.2 секунды
 setInterval(() => {
-    // Обновляем первую змейку
-    updateSnake(currentIndex, opacitySteps.length);
+    // Первая змейка (фиолетовая)
+    updateSnake(firstSnakeIndex, snakeLength, "purple");
 
-    // Обновляем вторую змейку
-    updateSnake(secondSnakeIndex, opacitySteps.length);
+    // Вторая змейка (белая)
+    updateSnake(secondSnakeIndex, snakeLength, "white");
 
     // Смещаем индексы
-    currentIndex = (currentIndex + 1) % links.length;
-    secondSnakeIndex = (secondSnakeIndex + 1) % links.length;
-}, 200); // Интервал 0.2 секунды
+    firstSnakeIndex = (firstSnakeIndex + 1) % totalLinks;
+    secondSnakeIndex = (secondSnakeIndex + 1) % totalLinks;
+}, 200);
