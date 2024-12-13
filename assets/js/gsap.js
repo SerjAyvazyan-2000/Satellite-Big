@@ -25,7 +25,6 @@ function updateSnake(startIndex, snakeLength, colorClass) {
     }
 }
 
-// Анимация с интервалом 0.2 секунды
 setInterval(() => {
     updateSnake(firstSnakeIndex, snakeLength, "purple");
 
