@@ -17,10 +17,12 @@
     background-position: top;
     background-repeat: no-repeat;
 }
-.footer .container{
+
+.footer .container {
     position: relative;
     z-index: 1;
 }
+
 .footer-body {
     align-items: center;
     gap: 10px;
@@ -110,6 +112,10 @@
     .footer-menu-list {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .footer::after {
+        background-image: url('../images/footerDecorMobile.png');
     }
 
     .footer {
