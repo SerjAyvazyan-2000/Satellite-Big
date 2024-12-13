@@ -10,7 +10,7 @@
     flex-direction: column-reverse; /* Чтобы звенья двигались снизу вверх */
     gap: 6px; /* Расстояние между звеньями */
     height: 912px; /* Высота как в макете */
-    width: 12px; /* Ширина контейнера */
+    width: 12px;
     position: absolute;
     left: 50%;
     top: 0;
