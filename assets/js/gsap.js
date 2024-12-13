@@ -29,7 +29,6 @@ function updateSnake(startIndex, snakeLength, colorClass) {
 setInterval(() => {
     updateSnake(firstSnakeIndex, snakeLength, "purple");
 
-    // Вторая змейка (белая)
     updateSnake(secondSnakeIndex, snakeLength, "white");
 
     // Смещаем индексы
