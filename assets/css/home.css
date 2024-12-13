@@ -207,7 +207,7 @@
     z-index: 2;
 }
 
-.videoPlayer{
+.videoPlayer {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -480,6 +480,7 @@
     opacity: .0;
     visibility: hidden;
 }
+
 .video-block.active .play-image {
     opacity: 0;
     visibility: hidden;
@@ -954,9 +955,39 @@
 
 .everyone-card-right {
     position: absolute;
-    right: 0;
-    top: 50%;
+    right: -200px;
+    top: 45%;
+    padding: 20px;
+    max-width: 356px;
+    max-height: 210px;
+    width: 100%;
+
 }
+.everyone-card-left img{
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.everyone-card-right img{
+    height: 170px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.everyone-card-right::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
 
 .for-everyone-column {
     gap: 20px;
@@ -964,14 +995,86 @@
 
 .everyone-card-left {
     position: absolute;
-    left: 0;
-    top: 50%;
+    left: -200px;
+    top: 45%;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 356px;
+    max-height: 210px;
+    width: 100%;
+}
+.everyone-mobile-item {
+    display: none;
+    padding: 20px;
+    position: relative;
+    background: rgba(23, 23, 23, 1);
+    border-radius: 10px;
+}
+.everyone-mobile-item img{
+    width: 100%;
+}
+
+.everyone-mobile-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+.everyone-card-left::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 20px;
+    padding: 1px;
+    background: linear-gradient(105.61deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0) 100%);
+    -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    z-index: -1;
+}
+
+.everyone-profession {
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    letter-spacing: -0.02em;
+    position: absolute;
+    background: rgba(30, 30, 32, 0.25);
+    padding: 4px 8px;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+    color: rgba(255, 255, 255, 1);
+    border-radius: 5px;
+
+
+}
+
+.profession-right {
+    bottom: 40px;
+    left: 40px;
+}
+
+.profession-left {
+    bottom: 40px;
+    left: 40px;
 }
 
 .everyone-small-item {
     max-width: 356px;
     max-height: 210px;
     width: 100%;
+}
+
+
+.everyone-small-item img {
+    border-radius: 10px;
+    object-fit: cover;
 }
 
 .everyone-big-item {
@@ -985,6 +1088,7 @@
     gap: 20px;
     padding: 0 166px;
     position: relative;
+    justify-content: center;
     z-index: 1;
 }
 
@@ -1531,6 +1635,7 @@
 }
 
 @media (max-width: 1400px) {
+
 }
 
 @media (max-width: 1200px) {
@@ -1543,6 +1648,10 @@
     .create-videos-items {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .everyone-card-right, .everyone-card-left {
+        display: none;
     }
 
     .hero-header {
@@ -1614,8 +1723,8 @@
         height: 440px;
     }
 
-    .everyone-card-right, .everyone-card-left {
-        display: none;
+    .everyone-mobile-item {
+        display: block;
     }
 
     .for-everyone-column {
@@ -1636,6 +1745,7 @@
         display: flex;
         overflow-x: scroll;
         overflow-y: hidden;
+        justify-content: stretch;
     }
 
     .everyone-small-item {
@@ -1803,9 +1913,11 @@
         line-height: 18px;
 
     }
-    .videoPlayer{
+
+    .videoPlayer {
         border-radius: 16px;
     }
+
     .users-choose-cnt::before {
         display: none;
     }

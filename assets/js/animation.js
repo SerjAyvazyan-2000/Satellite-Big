@@ -1,11 +1,10 @@
-// Все звенья
 const links = document.querySelectorAll(".animation-box");
 const linksAnother = document.querySelectorAll(".animation-another-box");
 
-const totalLinks = links.length; // Всего звеньев
+const totalLinks = links.length;
 
-const snakeLength = links.length; // Длина одной змейки
-const opacitySteps = [0.25, 0.5, 0.75, 1, 0.75, 0.5, 0.25]; // Значения прозрачности
+const snakeLength = links.length;
+const opacitySteps = [0.25, 0.5, 0.75, 1, 0.75, 0.5, 0.25];
 
 let firstSnakeIndex = 0;
 let secondSnakeIndex = 13;
