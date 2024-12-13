@@ -5,7 +5,6 @@ const menuBg = document.querySelector('.menu-bg');
 const headerBody = document.querySelector('.header-body');
 
 
-
 document.addEventListener('DOMContentLoaded', function () {
     burger.addEventListener("click", function (e) {
         if (menu.classList.contains('active')) {
@@ -44,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-window.addEventListener('scroll', function() {
+window.addEventListener('scroll', function () {
     const headerTop = document.querySelector('.header')
 
 
@@ -58,18 +57,14 @@ window.addEventListener('scroll', function() {
 });
 
 
-
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector('.reviews-btn');
     const reviewsList = document.querySelector('.reviews-list');
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         reviewsList.classList.toggle('active');
     });
 });
-
 
 
 function toggleActiveState(item) {
@@ -120,7 +115,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const button = document.querySelector('.reviews-btn');
     const reviewsList = document.querySelector('.reviews-list');
 
-    button.addEventListener('click', function() {
+    button.addEventListener('click', function () {
         reviewsList.classList.toggle('active');
     });
 });
@@ -151,82 +146,135 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
 });
-
-
-
 const canvas = document.getElementById("wave");
-const ctx = canvas.getContext("2d");
 
-// Resize canvas to fill the container
-function resizeCanvas() {
-    canvas.width = canvas.offsetWidth;
-    canvas.height = canvas.offsetHeight;
-}
-resizeCanvas();
-if(window.innerWidth > 768){
-    window.addEventListener("resize", resizeCanvas);
+if(canvas){
+    const ctx = canvas.getContext("2d");
 
-}
 
-// Line settings
-const lineCount = 50; // Number of lines
-const lineSpacing = 15; // Space between lines
-const lineWidth = 2; // Width of each line
-const maxAmplitude = 150; // Maximum deviation for the central line
+    function resizeCanvas() {
+        canvas.width = canvas.offsetWidth;
+        canvas.height = canvas.offsetHeight;
+    }
 
-// Animation variables
-let offsets = Array(lineCount).fill(0).map(() => Math.random() * Math.PI * 2);
-const speed = 0.05; // Speed of movement
+    resizeCanvas();
+    if (window.innerWidth > 768) {
+        window.addEventListener("resize", resizeCanvas);
 
-function drawGradientLine() {
-    const gradient = ctx.createLinearGradient(0, canvas.height / 2, canvas.width, canvas.height / 2);
-    gradient.addColorStop(0, "rgba(255, 255, 255, 0.3)"); // Semi-transparent white
-    gradient.addColorStop(0.5, "rgba(255, 255, 255, 1)"); // Full white in the center
-    gradient.addColorStop(1, "rgba(255, 255, 255, 0.3)"); // Semi-transparent white
+    }
 
-    ctx.beginPath();
-    ctx.moveTo(0, canvas.height / 2);
-    ctx.lineTo(canvas.width, canvas.height / 2);
-    ctx.strokeStyle = gradient;
-    ctx.lineWidth = 2; // Adjust width for visibility
-    ctx.stroke();
-}
+    const lineCount = 50;
+    const lineSpacing = 15;
+    const lineWidth = 2;
+    const maxAmplitude = 150;
 
-function drawLines() {
-    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    let offsets = Array(lineCount).fill(0).map(() => Math.random() * Math.PI * 2);
+    const speed = 0.05;
 
-    drawGradientLine(); // Draw the static gradient line
-
-    const centerY = canvas.height / 2;
-    const centerX = canvas.width / 2;
-
-    for (let i = 0; i < lineCount; i++) {
-        const x = i * lineSpacing + (canvas.width / 2 - (lineCount * lineSpacing) / 2);
-        const distanceFromCenter = Math.abs(centerX - x);
-        const normalizedDistance = 1 - distanceFromCenter / centerX; // 1 near center, 0 near edges
-        const lineAmplitude = maxAmplitude * normalizedDistance; // Scale height based on distance
-        const offset = offsets[i];
-        const deviation = Math.sin(offset) * lineAmplitude;
-
-        const alpha = Math.abs(deviation) / maxAmplitude; // Alpha based on deviation
-
-        const gradient = ctx.createLinearGradient(x, centerY, x, centerY + deviation);
-        gradient.addColorStop(0, `rgba(255, 255, 255, 1)`); // Solid white at the center
-        gradient.addColorStop(1, `rgba(255, 255, 255, ${0.3 + 0.7 * alpha})`); // Adjusted transparency
+    function drawGradientLine() {
+        const gradient = ctx.createLinearGradient(0, canvas.height / 2, canvas.width, canvas.height / 2);
+        gradient.addColorStop(0, "rgba(255, 255, 255, 0.3)");
+        gradient.addColorStop(0.5, "rgba(255, 255, 255, 1)");
+        gradient.addColorStop(1, "rgba(255, 255, 255, 0.3)"); // Semi-transparent white
 
         ctx.beginPath();
-        ctx.moveTo(x, centerY);
-        ctx.lineTo(x, centerY + deviation);
+        ctx.moveTo(0, canvas.height / 2);
+        ctx.lineTo(canvas.width, canvas.height / 2);
         ctx.strokeStyle = gradient;
-        ctx.lineWidth = lineWidth;
+        ctx.lineWidth = 2; // Adjust width for visibility
         ctx.stroke();
     }
+
+    function drawLines() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        drawGradientLine(); // Draw the static gradient line
+
+        const centerY = canvas.height / 2;
+        const centerX = canvas.width / 2;
+
+        for (let i = 0; i < lineCount; i++) {
+            const x = i * lineSpacing + (canvas.width / 2 - (lineCount * lineSpacing) / 2);
+            const distanceFromCenter = Math.abs(centerX - x);
+            const normalizedDistance = 1 - distanceFromCenter / centerX; // 1 near center, 0 near edges
+            const lineAmplitude = maxAmplitude * normalizedDistance; // Scale height based on distance
+            const offset = offsets[i];
+            const deviation = Math.sin(offset) * lineAmplitude;
+
+            const alpha = Math.abs(deviation) / maxAmplitude; // Alpha based on deviation
+
+            const gradient = ctx.createLinearGradient(x, centerY, x, centerY + deviation);
+            gradient.addColorStop(0, `rgba(255, 255, 255, 1)`); // Solid white at the center
+            gradient.addColorStop(1, `rgba(255, 255, 255, ${0.3 + 0.7 * alpha})`); // Adjusted transparency
+
+            ctx.beginPath();
+            ctx.moveTo(x, centerY);
+            ctx.lineTo(x, centerY + deviation);
+            ctx.strokeStyle = gradient;
+            ctx.lineWidth = lineWidth;
+            ctx.stroke();
+        }
+    }
+
+    function animate() {
+        offsets = offsets.map(offset => offset + speed);
+        drawLines();
+        requestAnimationFrame(animate);
+    }
+
+    animate();
 }
 
-function animate() {
-    offsets = offsets.map(offset => offset + speed);
-    drawLines();
-    requestAnimationFrame(animate);
-}
 
-animate();
+
+
+document.querySelectorAll('.video-block').forEach(block => {
+    const playButton = block.querySelector('.playButton');
+    const videoPlayer = block.querySelector('.videoPlayer');
+    const defaultImage = block.getAttribute('data-gif');
+    let isPlaying = false;
+
+    function playVideo() {
+        block.style.backgroundImage = "none";
+        if (videoPlayer) {
+            videoPlayer.style.display = "block";
+        }
+        videoPlayer.play();
+        if (playButton) {
+            playButton.style.display = "none";
+
+        }
+        isPlaying = true;
+    }
+
+    function stopVideo() {
+        block.style.backgroundImage = `url('${defaultImage}')`;
+        if (videoPlayer) {
+            videoPlayer.style.display = "none";
+            videoPlayer.pause();
+            videoPlayer.currentTime = 0;
+        }
+
+        if (playButton) {
+            playButton.style.display = "block";
+
+        }
+        isPlaying = false;
+    }
+
+
+    if (playButton) {
+        playButton?.addEventListener("click", () => {
+            isPlaying ? stopVideo() : playVideo();
+        });
+    }
+    if (block) {
+        block?.addEventListener("click", () => {
+            isPlaying ? stopVideo() : playVideo();
+        });
+    }
+
+    if (videoPlayer) {
+        videoPlayer.addEventListener("ended", stopVideo);
+    }
+});

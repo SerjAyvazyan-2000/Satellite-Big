@@ -207,6 +207,18 @@
     z-index: 2;
 }
 
+.videoPlayer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    border-radius: 30px;
+    z-index: 1;
+
+}
+
 .btn-gradient:before {
     content: "";
     position: absolute;
@@ -400,6 +412,7 @@
     margin-top: 80px;
     position: relative;
     cursor: pointer;
+
 }
 
 .video-block {
@@ -1790,7 +1803,9 @@
         line-height: 18px;
 
     }
-
+    .videoPlayer{
+        border-radius: 16px;
+    }
     .users-choose-cnt::before {
         display: none;
     }

@@ -95,10 +95,12 @@
                         <button class=" btn-gradient">Создать видео</button>
                     </div>
 
-                    <div data-gif="assets/images/gif1.gif" data-img="assets/images/videoFon1.png"
-                         style="background-image: url('assets/images/videoFon1.png')" class="hero-video-block G-image">
-                        <video class="videoPlayer" src=""></video>
-                        <div class="play-image">
+                    <div data-gif="assets/images/gif1.gif"
+                         style="background-image: url('assets/images/gif1.gif')" class="hero-video-block video-block G-image">
+                        <video autoplay muted  style="display: none" class="videoPlayer">
+                            <source src="./assets/video/showcase_1.mp4" type="video/webm">
+                        </video>
+                        <div class="play-image playButton">
                             <img src="assets/images/play.png" alt="">
                         </div>
                     </div>
