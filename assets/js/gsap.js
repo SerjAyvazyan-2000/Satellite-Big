@@ -15,7 +15,6 @@ function updateSnake(startIndex, snakeLength, colorClass) {
         link.classList.remove(colorClass); // Убираем цвет
     });
 
-    // Обновляем звенья змейки
     for (let i = 0; i < snakeLength; i++) {
         const opacity = opacitySteps[i % opacitySteps.length];
         const index = (startIndex + i) % totalLinks; // Цикличность
