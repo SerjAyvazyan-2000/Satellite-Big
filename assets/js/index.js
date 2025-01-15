@@ -278,3 +278,9 @@ document.querySelectorAll('.video-block').forEach(block => {
         videoPlayer.addEventListener("ended", stopVideo);
     }
 });
+
+
+
+const scrollbar = Scrollbar.init(document.querySelector(".wrapper"), {
+    damping: 0.08,
+});
